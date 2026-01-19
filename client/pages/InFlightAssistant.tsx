@@ -249,7 +249,7 @@ export default function InFlightAssistant() {
                   </div>
 
                   <div className="pt-2 border-t border-border">
-                    <Link to="/meeting-brief/meeting-1" className="w-full block">
+                    <Link to="/meeting-brief/sample-1" className="w-full block">
                       <Button
                         variant="outline"
                         size="sm"

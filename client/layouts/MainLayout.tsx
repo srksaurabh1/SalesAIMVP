@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Brain, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -21,8 +21,12 @@ export function MainLayout({ children }: MainLayoutProps) {
             to="/"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-primary-foreground" />
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center overflow-hidden">
+              <img
+                src="/Image/Sales AI logo.png"
+                alt="SalesAI"
+                className="w-6 h-6 object-contain"
+              />
             </div>
             <span className="font-bold text-lg text-primary hidden sm:inline">
               SalesAI
@@ -113,8 +117,8 @@ export function MainLayout({ children }: MainLayoutProps) {
             {/* Brand Section */}
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 bg-primary rounded flex items-center justify-center">
-                  <Brain className="w-4 h-4 text-primary-foreground" />
+                <div className="w-6 h-6 bg-primary rounded flex items-center justify-center overflow-hidden">
+                  <img src="/Image/Sales AI logo.png" alt="SalesAI" className="w-4 h-4 object-contain" />
                 </div>
                 <span className="font-bold text-primary">SalesAI</span>
               </div>

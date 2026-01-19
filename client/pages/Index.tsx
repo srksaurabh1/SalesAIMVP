@@ -3,7 +3,7 @@ import { RoleToggle } from "@/components/dashboard/RoleToggle";
 import { IntentSpikesAlert } from "@/components/dashboard/IntentSpikesAlert";
 import { UpcomingMeetings } from "@/components/dashboard/UpcomingMeetings";
 import { useRole } from "@/hooks/useRole";
-import { Brain, TrendingUp } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 
 export default function Index() {
   const { role } = useRole();
@@ -16,7 +16,7 @@ export default function Index() {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-6">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <Brain className="w-6 h-6 text-primary" />
+                <img src="/Image/Sales AI logo.png" alt="SalesAI" className="w-6 h-6 object-contain" />
                 <span className="text-sm font-semibold text-primary">
                   HOME
                 </span>

@@ -275,6 +275,170 @@ export const mockMeetingBriefs: Record<string, MeetingBrief> = {
       },
     ],
   },
+  "meeting-3": {
+    id: "meeting-3",
+    prospectName: "Ananya Gupta",
+    companyName: "Wipro",
+    role: "CTO",
+    industry: "IT Services & Consulting",
+    iceBreakers: [
+      {
+        id: "ice-6",
+        question:
+          "Wipro has been a leader in sustainability. How does that influence your technology choices?",
+        context: "Wipro's recent sustainability report",
+      },
+      {
+        id: "ice-7",
+        question:
+          "I saw the recent acquisition of Capco. How is the integration of consulting and technology capabilities progressing?",
+        context: "News article on Capco acquisition",
+      },
+    ],
+    financialMetrics: [
+      { label: "Revenue", value: "₹80,000 Cr", change: 8, trend: "up" },
+      { label: "Net Income", value: "₹10,800 Cr", change: 12, trend: "up" },
+      { label: "Employees", value: "250,000+", change: 7, trend: "up" },
+    ],
+    valueMap: [
+      {
+        feature: "Scalable API Integrations",
+        painPoint:
+          "Legacy systems are difficult to integrate with new cloud services.",
+        relevance: "high",
+      },
+      {
+        feature: "Enhanced Security Protocols",
+        painPoint:
+          "Ensuring data security across a hybrid cloud environment is a top priority.",
+        relevance: "high",
+      },
+    ],
+    confidenceScore: 82,
+    citations: [
+      {
+        text: "Sustainability Report",
+        source: "Wipro Website",
+        url: "#",
+      },
+      {
+        text: "Capco Acquisition News",
+        source: "Economic Times",
+        url: "#",
+      },
+    ],
+  },
+  "meeting-4": {
+    id: "meeting-4",
+    prospectName: "Arjun Singh",
+    companyName: "HCL Technologies",
+    role: "Head of Product",
+    industry: "Technology",
+    iceBreakers: [
+      {
+        id: "ice-8",
+        question:
+          "HCL's 'Mode 1-2-3' strategy is interesting. How does your product fit into that framework?",
+        context: "HCL's investor presentation",
+      },
+      {
+        id: "ice-9",
+        question:
+          "Congratulations on the partnership with Google Cloud. What new product opportunities does that open up?",
+        context: "Press release on Google Cloud partnership",
+      },
+    ],
+    financialMetrics: [
+      { label: "Market Cap", value: "₹3.5 Lakh Cr", change: 18, trend: "up" },
+      { label: "Deal TCV", value: "$2.1B (Last Qtr)", change: 25, trend: "up" },
+      { label: "Patents Filed", value: "1500+", change: 30, trend: "up" },
+    ],
+    valueMap: [
+      {
+        feature: "Flexible Pricing Tiers",
+        painPoint:
+          "Current solutions have rigid pricing that doesn't scale with usage.",
+        relevance: "high",
+      },
+      {
+        feature: "Usage-based Analytics",
+        painPoint:
+          "Lack of visibility into which features are driving customer value.",
+        relevance: "medium",
+      },
+    ],
+    confidenceScore: 78,
+    citations: [
+      {
+        text: "Mode 1-2-3 Strategy",
+        source: "HCL Tech Website",
+        url: "#",
+      },
+      {
+        text: "Google Cloud Partnership",
+        source: "Company Newsroom",
+        url: "#",
+      },
+    ],
+  },
+  "meeting-5": {
+    id: "meeting-5",
+    prospectName: "Saanvi Patel",
+    companyName: "Paytm",
+    role: "CFO",
+    industry: "FinTech",
+    iceBreakers: [
+      {
+        id: "ice-10",
+        question:
+          "Paytm's journey from a wallet to a full-stack financial services platform is remarkable. What's the next big focus for monetization?",
+        context: "Paytm's IPO prospectus and recent news",
+      },
+      {
+        id: "ice-11",
+        question:
+          "I saw the strong growth in loan disbursals. How are you managing the financial risk and ROI on that portfolio?",
+        context: "Quarterly earnings call transcript",
+      },
+    ],
+    financialMetrics: [
+      { label: "GMV", value: "₹4.0 Lakh Cr", change: 40, trend: "up" },
+      { label: "Revenue from Ops", value: "₹5,264 Cr", change: 65, trend: "up" },
+      {
+        label: "Contribution Profit",
+        value: "₹2,168 Cr",
+        change: 210,
+        trend: "up",
+      },
+    ],
+    valueMap: [
+      {
+        feature: "ROI Forecasting Models",
+        painPoint:
+          "Difficult to accurately forecast ROI on new marketing and sales investments.",
+        relevance: "high",
+      },
+      {
+        feature: "Automated Financial Reporting",
+        painPoint:
+          "Manual report generation for board meetings is time-consuming and prone to errors.",
+        relevance: "high",
+      },
+    ],
+    confidenceScore: 91,
+    citations: [
+      {
+        text: "Quarterly Earnings",
+        source: "Paytm Investor Relations",
+        url: "#",
+      },
+      {
+        text: "Loan Disbursal Growth",
+        source: "Livemint Article",
+        url: "#",
+      },
+    ],
+  },
 };
 
 // Talk tracks for in-flight assistant

@@ -32,6 +32,10 @@ const App = () => (
 );
 
 const container = document.getElementById("root");
-if (container && !container.hasChildNodes()) {
-  createRoot(container).render(<App />);
+if (container) {
+  // Get or create the root, properly handling HMR
+  const root =
+    (container as any)._reactRootContainer ||
+    createRoot(container);
+  root.render(<App />);
 }

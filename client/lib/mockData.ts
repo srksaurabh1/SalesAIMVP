@@ -229,14 +229,25 @@ export const mockMeetingBriefs: Record<string, MeetingBrief> = {
       },
       {
         id: "ice-5",
-        question: "I see you're open-sourcing more projects. What's the strategy there?",
+        question:
+          "I see you're open-sourcing more projects. What's the strategy there?",
         context: "3 major open-source projects launched this year",
       },
     ],
     financialMetrics: [
-      { label: "Monthly Recurring Revenue", value: "$1.2M", change: 42, trend: "up" },
+      {
+        label: "Monthly Recurring Revenue",
+        value: "$1.2M",
+        change: 42,
+        trend: "up",
+      },
       { label: "Enterprise Customers", value: "12", change: 5, trend: "up" },
-      { label: "Infrastructure Cost", value: "$450K", change: 18, trend: "down" },
+      {
+        label: "Infrastructure Cost",
+        value: "$450K",
+        change: 18,
+        trend: "down",
+      },
     ],
     valueMap: [
       {

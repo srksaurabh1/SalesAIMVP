@@ -11,7 +11,7 @@ export function useIntentSpikes() {
     const timer = setTimeout(() => {
       // Sort by most recent first
       const sortedSpikes = mockIntentSpikes.sort(
-        (a, b) => b.timestamp.getTime() - a.timestamp.getTime()
+        (a, b) => b.timestamp.getTime() - a.timestamp.getTime(),
       );
       setSpikes(sortedSpikes);
       setIsLoading(false);

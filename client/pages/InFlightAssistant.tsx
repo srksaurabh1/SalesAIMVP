@@ -163,9 +163,9 @@ export default function InFlightAssistant() {
                     <CardContent>
                       <div className="bg-muted/30 rounded-lg p-4 min-h-40 border border-dashed border-border">
                         <p className="text-sm text-muted-foreground">
-                          Real-time transcription and notes would appear here during
-                          the call. This space captures key discussion points, action
-                          items, and next steps.
+                          Real-time transcription and notes would appear here
+                          during the call. This space captures key discussion
+                          points, action items, and next steps.
                         </p>
                       </div>
                     </CardContent>
@@ -184,7 +184,8 @@ export default function InFlightAssistant() {
                       </span>
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      AI detected pricing concern. Check Rebuttals tab for responses.
+                      AI detected pricing concern. Check Rebuttals tab for
+                      responses.
                     </p>
                   </CardContent>
                 </Card>
@@ -221,9 +222,7 @@ export default function InFlightAssistant() {
                       Prospect
                     </p>
                     <p className="font-semibold text-foreground">Sarah Chen</p>
-                    <p className="text-xs text-muted-foreground">
-                      VP of Sales
-                    </p>
+                    <p className="text-xs text-muted-foreground">VP of Sales</p>
                   </div>
 
                   <div>

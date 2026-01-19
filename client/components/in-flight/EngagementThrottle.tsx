@@ -25,14 +25,15 @@ export function EngagementThrottle() {
             ⚠️ Campaign Saturation Alert
           </h3>
           <p className="text-sm text-muted-foreground mb-2">
-            You've contacted this prospect <strong>5 times in the last 7 days</strong>.
-            They may be experiencing outreach fatigue.
+            You've contacted this prospect{" "}
+            <strong>5 times in the last 7 days</strong>. They may be
+            experiencing outreach fatigue.
           </p>
 
           <div className="bg-white dark:bg-card rounded p-2 text-xs text-muted-foreground border border-warning/20 mb-3">
-            <strong>Recommendation:</strong> Consider reducing outreach frequency or
-            adding unique value in your next message. Personalize further based on
-            their recent activity.
+            <strong>Recommendation:</strong> Consider reducing outreach
+            frequency or adding unique value in your next message. Personalize
+            further based on their recent activity.
           </div>
 
           <div className="flex gap-2">

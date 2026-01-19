@@ -30,9 +30,7 @@ export function EscalateButton() {
     return (
       <div className="flex items-center gap-2 p-3 rounded-lg bg-success/10 border border-success/20 text-success">
         <CheckCircle className="w-5 h-5" />
-        <p className="text-sm font-medium">
-          Escalated to Human Review
-        </p>
+        <p className="text-sm font-medium">Escalated to Human Review</p>
       </div>
     );
   }
@@ -70,7 +68,10 @@ export function EscalateButton() {
 
           <AlertDialogFooter>
             <AlertDialogCancel>Keep Using AI</AlertDialogCancel>
-            <AlertDialogAction onClick={handleEscalate} className="bg-secondary hover:bg-secondary/90">
+            <AlertDialogAction
+              onClick={handleEscalate}
+              className="bg-secondary hover:bg-secondary/90"
+            >
               Escalate Now
             </AlertDialogAction>
           </AlertDialogFooter>

@@ -57,7 +57,9 @@ export function RebuttalsPanel({ rebuttals }: RebuttalsProps) {
             <CollapsibleContent className="px-3 pb-3">
               <div className="p-3 rounded-lg bg-secondary/10 border border-secondary/20">
                 <p className="text-sm text-foreground">
-                  <span className="font-semibold text-secondary">Response:</span>{" "}
+                  <span className="font-semibold text-secondary">
+                    Response:
+                  </span>{" "}
                   {item.rebuttal}
                 </p>
               </div>

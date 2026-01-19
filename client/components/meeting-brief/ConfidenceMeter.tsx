@@ -48,12 +48,8 @@ export function ConfidenceMeter({ score }: ConfidenceMeterProps) {
             <li>
               ✓ All key information has been cross-referenced and verified
             </li>
-            <li>
-              ✓ This prospect is highly likely to value your solution
-            </li>
-            <li>
-              ✓ The timing and opportunity alignment are favorable
-            </li>
+            <li>✓ This prospect is highly likely to value your solution</li>
+            <li>✓ The timing and opportunity alignment are favorable</li>
           </ul>
         </div>
 

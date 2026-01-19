@@ -43,7 +43,10 @@ export function ValueMap({ items }: ValueMapProps) {
 
       <div className="space-y-3">
         {items.map((item) => (
-          <Card key={item.feature} className="hover:shadow-md transition-shadow">
+          <Card
+            key={item.feature}
+            className="hover:shadow-md transition-shadow"
+          >
             <CardContent className="pt-6">
               <div className="space-y-2">
                 <div className="flex items-start justify-between gap-3">

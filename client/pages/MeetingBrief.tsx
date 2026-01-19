@@ -59,7 +59,10 @@ export default function MeetingBrief() {
                 {brief.prospectName}
               </h1>
               <div className="flex flex-wrap items-center gap-3 mt-3">
-                <Badge variant="secondary" className="bg-primary/20 text-primary">
+                <Badge
+                  variant="secondary"
+                  className="bg-primary/20 text-primary"
+                >
                   {brief.role}
                 </Badge>
                 <span className="text-muted-foreground text-sm">
@@ -162,15 +165,20 @@ export default function MeetingBrief() {
                   sections:
                 </p>
                 <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                  <li>• <strong>Ice Breakers:</strong> Contextual conversation starters</li>
+                  <li>
+                    • <strong>Ice Breakers:</strong> Contextual conversation
+                    starters
+                  </li>
                   <li>
                     • <strong>Financials:</strong> Key metrics and growth trends
                   </li>
                   <li>
-                    • <strong>Value Map:</strong> How our solution fits their needs
+                    • <strong>Value Map:</strong> How our solution fits their
+                    needs
                   </li>
                   <li>
-                    • <strong>Sources:</strong> Data sources backing our insights
+                    • <strong>Sources:</strong> Data sources backing our
+                    insights
                   </li>
                 </ul>
               </div>

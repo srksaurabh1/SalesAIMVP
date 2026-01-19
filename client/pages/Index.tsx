@@ -72,26 +72,28 @@ export default function Index() {
               {/* Additional Context for Current Role */}
               <div className="mt-8 p-6 rounded-lg bg-muted/30 border border-border">
                 <h3 className="font-semibold mb-2">
-                  {role === "sdr"
-                    ? "SDR Mode Tips"
-                    : "AE Mode Tips"}
+                  {role === "sdr" ? "SDR Mode Tips" : "AE Mode Tips"}
                 </h3>
                 {role === "sdr" ? (
                   <ul className="text-sm text-muted-foreground space-y-2">
                     <li className="flex gap-2">
                       <span>•</span>
-                      <span>Focus on understanding prospect pain points and goals</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span>•</span>
                       <span>
-                        Use Ice Breakers from the Meeting Brief to start conversations
+                        Focus on understanding prospect pain points and goals
                       </span>
                     </li>
                     <li className="flex gap-2">
                       <span>•</span>
                       <span>
-                        Watch for Intent Spikes - prospects showing high engagement
+                        Use Ice Breakers from the Meeting Brief to start
+                        conversations
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span>•</span>
+                      <span>
+                        Watch for Intent Spikes - prospects showing high
+                        engagement
                       </span>
                     </li>
                   </ul>
@@ -99,16 +101,21 @@ export default function Index() {
                   <ul className="text-sm text-muted-foreground space-y-2">
                     <li className="flex gap-2">
                       <span>•</span>
-                      <span>Leverage the Meeting Brief for deep account context</span>
-                    </li>
-                    <li className="flex gap-2">
-                      <span>•</span>
-                      <span>Use In-Flight Assistant during calls for live support</span>
+                      <span>
+                        Leverage the Meeting Brief for deep account context
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span>•</span>
                       <span>
-                        Focus on value map and financial metrics for decision makers
+                        Use In-Flight Assistant during calls for live support
+                      </span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span>•</span>
+                      <span>
+                        Focus on value map and financial metrics for decision
+                        makers
                       </span>
                     </li>
                   </ul>

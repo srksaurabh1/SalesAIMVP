@@ -34,7 +34,8 @@ export function TalkTrackSidebar({ tracks }: TalkTrackSidebarProps) {
           <CardTitle className="text-base">Live Talk Track</CardTitle>
         </div>
         <p className="text-xs text-muted-foreground mt-1">
-          Category: <span className="font-semibold">{currentTrack.category}</span>
+          Category:{" "}
+          <span className="font-semibold">{currentTrack.category}</span>
         </p>
       </CardHeader>
 

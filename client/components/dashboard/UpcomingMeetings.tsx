@@ -26,7 +26,9 @@ export function UpcomingMeetings() {
     return (
       <div className="text-center py-12">
         <Briefcase className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-        <p className="text-muted-foreground text-lg mb-2">No upcoming meetings</p>
+        <p className="text-muted-foreground text-lg mb-2">
+          No upcoming meetings
+        </p>
         <p className="text-sm text-muted-foreground">
           Schedule some calls to get started
         </p>
@@ -78,17 +80,13 @@ export function UpcomingMeetings() {
 
             {/* Context */}
             <div>
-              <p className="text-sm text-muted-foreground">
-                {meeting.context}
-              </p>
+              <p className="text-sm text-muted-foreground">{meeting.context}</p>
             </div>
 
             {/* Status */}
             <div className="pt-2">
               <Badge
-                variant={
-                  meeting.status === "ready" ? "default" : "secondary"
-                }
+                variant={meeting.status === "ready" ? "default" : "secondary"}
                 className={
                   meeting.status === "ready"
                     ? "bg-success hover:bg-success/90"
@@ -103,8 +101,8 @@ export function UpcomingMeetings() {
             <div className="pt-2 border-t border-border">
               {role === "sdr" ? (
                 <p className="text-xs text-muted-foreground">
-                  <strong>Qualification focus:</strong> Understand needs and pain
-                  points
+                  <strong>Qualification focus:</strong> Understand needs and
+                  pain points
                 </p>
               ) : (
                 <p className="text-xs text-muted-foreground">
@@ -116,19 +114,16 @@ export function UpcomingMeetings() {
 
             {/* Actions */}
             <div className="flex gap-2 pt-2">
-              <Link
-                to={`/meeting-brief/${meeting.id}`}
-                className="flex-1"
-              >
+              <Link to={`/meeting-brief/${meeting.id}`} className="flex-1">
                 <Button variant="outline" size="sm" className="w-full">
                   View Brief
                 </Button>
               </Link>
-              <Link
-                to="/in-flight-assistant"
-                className="flex-1"
-              >
-                <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
+              <Link to="/in-flight-assistant" className="flex-1">
+                <Button
+                  size="sm"
+                  className="w-full bg-primary hover:bg-primary/90"
+                >
                   Start Call
                 </Button>
               </Link>

@@ -1,7 +1,7 @@
 import "./global.css";
 
 import { Toaster } from "@/components/ui/toaster";
-import { createRoot } from "react-dom/client";
+import { createRoot, Root } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -31,13 +31,20 @@ const App = () => (
   </QueryClientProvider>
 );
 
+// Module-level variable to persist root across HMR reloads
+let root: Root | null = null;
+
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  // Safely create root only once, reusing existing root on HMR updates
-  let root = (rootElement as any)._reactRoot;
   if (!root) {
     root = createRoot(rootElement);
-    (rootElement as any)._reactRoot = root;
   }
   root.render(<App />);
+}
+
+// Enable HMR hot reload
+if (import.meta.hot) {
+  import.meta.hot.dispose(() => {
+    // Cleanup on HMR dispose (optional)
+  });
 }

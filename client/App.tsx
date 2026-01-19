@@ -31,11 +31,13 @@ const App = () => (
   </QueryClientProvider>
 );
 
-const container = document.getElementById("root");
-if (container) {
-  // Get or create the root, properly handling HMR
-  const root =
-    (container as any)._reactRootContainer ||
-    createRoot(container);
+const rootElement = document.getElementById("root");
+if (rootElement) {
+  // Safely create root only once, reusing existing root on HMR updates
+  let root = (rootElement as any)._reactRoot;
+  if (!root) {
+    root = createRoot(rootElement);
+    (rootElement as any)._reactRoot = root;
+  }
   root.render(<App />);
 }

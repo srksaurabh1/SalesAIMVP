@@ -57,7 +57,7 @@ export interface MeetingBrief {
 // Mock Meetings Data
 export const mockMeetings: Meeting[] = [
   {
-    id: "meeting-1",
+    id: "sample-1",
     prospectName: "Sarah Chen",
     companyName: "TechVenture Inc",
     time: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
@@ -67,7 +67,7 @@ export const mockMeetings: Meeting[] = [
     email: "sarah.chen@techventure.com",
   },
   {
-    id: "meeting-2",
+    id: "sample-2",
     prospectName: "Michael Rodriguez",
     companyName: "CloudScale Solutions",
     time: new Date(Date.now() + 4 * 60 * 60 * 1000), // 4 hours from now

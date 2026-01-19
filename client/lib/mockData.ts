@@ -58,53 +58,53 @@ export interface MeetingBrief {
 export const mockMeetings: Meeting[] = [
   {
     id: "sample-1",
-    prospectName: "Sarah Chen",
-    companyName: "TechVenture Inc",
+    prospectName: "Priya Sharma",
+    companyName: "Infosys",
     time: new Date(Date.now() + 2 * 60 * 60 * 1000), // 2 hours from now
     status: "ready",
-    avatar: "SC",
+    avatar: "PS",
     context: "VP of Sales - interested in pipeline automation",
-    email: "sarah.chen@techventure.com",
+    email: "priya.sharma@infosys.com",
   },
   {
     id: "sample-2",
-    prospectName: "Michael Rodriguez",
-    companyName: "CloudScale Solutions",
+    prospectName: "Rohan Mehta",
+    companyName: "Tata Consultancy Services",
     time: new Date(Date.now() + 4 * 60 * 60 * 1000), // 4 hours from now
     status: "researching",
-    avatar: "MR",
+    avatar: "RM",
     context: "Director of Engineering - evaluating solutions",
-    email: "mrodriguez@cloudscale.io",
+    email: "rohan.mehta@tcs.com",
   },
   {
     id: "meeting-3",
-    prospectName: "Jessica Thompson",
-    companyName: "DataFlow Systems",
+    prospectName: "Ananya Gupta",
+    companyName: "Wipro",
     time: new Date(Date.now() + 24 * 60 * 60 * 1000), // Tomorrow
     status: "researching",
-    avatar: "JT",
+    avatar: "AG",
     context: "CTO - exploring integration capabilities",
-    email: "jthompson@dataflow.com",
+    email: "ananya.gupta@wipro.com",
   },
   {
     id: "meeting-4",
-    prospectName: "David Park",
-    companyName: "NextGen Analytics",
+    prospectName: "Arjun Singh",
+    companyName: "HCL Technologies",
     time: new Date(Date.now() + 48 * 60 * 60 * 1000), // In 2 days
     status: "ready",
-    avatar: "DP",
+    avatar: "AS",
     context: "Head of Product - pricing discussion",
-    email: "dpark@nextgen.ai",
+    email: "arjun.singh@hcl.com",
   },
   {
     id: "meeting-5",
-    prospectName: "Emily Watson",
-    companyName: "FinTech Innovations",
+    prospectName: "Saanvi Patel",
+    companyName: "Paytm",
     time: new Date(Date.now() - 2 * 60 * 60 * 1000), // 2 hours ago (past)
     status: "ready",
-    avatar: "EW",
+    avatar: "SP",
     context: "CFO - ROI validation",
-    email: "ewatson@fintech.io",
+    email: "saanvi.patel@paytm.com",
   },
 ];
 
@@ -112,34 +112,34 @@ export const mockMeetings: Meeting[] = [
 export const mockIntentSpikes: IntentSpike[] = [
   {
     id: "spike-1",
-    prospectName: "Sarah Chen",
+    prospectName: "Priya Sharma",
     activity: "white_paper",
     timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
-    company: "TechVenture Inc",
+    company: "Infosys",
     details: "Downloaded 'Pipeline Automation 2026' white paper",
   },
   {
     id: "spike-2",
-    prospectName: "Marcus Johnson",
+    prospectName: "Vikram Rao",
     activity: "pricing_page",
     timestamp: new Date(Date.now() - 1 * 60 * 60 * 1000),
-    company: "Digital First Corp",
+    company: "Reliance Jio",
     details: "Spent 8 minutes on pricing page - viewed enterprise plan",
   },
   {
     id: "spike-3",
-    prospectName: "Lisa Anderson",
+    prospectName: "Aisha Khan",
     activity: "case_study",
     timestamp: new Date(Date.now() - 30 * 60 * 1000),
-    company: "RetailPro Systems",
+    company: "Flipkart",
     details: "Viewed 3 case studies in logistics industry",
   },
   {
     id: "spike-4",
-    prospectName: "Robert Wilson",
+    prospectName: "Aditya Joshi",
     activity: "demo",
     timestamp: new Date(Date.now() - 15 * 60 * 1000),
-    company: "CloudScale Solutions",
+    company: "Tata Consultancy Services",
     details: "Requested live product demo - high engagement signal",
   },
 ];
@@ -148,35 +148,35 @@ export const mockIntentSpikes: IntentSpike[] = [
 export const mockMeetingBriefs: Record<string, MeetingBrief> = {
   "sample-1": {
     id: "sample-1",
-    prospectName: "Sarah Chen",
-    companyName: "TechVenture Inc",
+    prospectName: "Priya Sharma",
+    companyName: "Infosys",
     role: "VP of Sales",
-    industry: "SaaS",
+    industry: "IT Services",
     iceBreakers: [
       {
         id: "ice-1",
         question:
-          "I saw TechVenture expanded into the EU market last month. How's that transition going?",
-        context: "Recent LinkedIn post about European expansion",
+          "I saw Infosys launched a new AI platform last month. How's the market reception?",
+        context: "Recent press release about new AI platform",
       },
       {
         id: "ice-2",
         question:
-          "Your recent funding round focused on sales team expansion. What's driving that growth?",
-        context: "Series B funding announcement ($15M)",
+          "Your recent quarterly results showed strong growth in digital services. What's driving that success?",
+        context: "Quarterly earnings report",
       },
       {
         id: "ice-3",
         question:
-          "I noticed you're hiring heavily in the sales operations space. Building out a revenue team?",
-        context: "5 sales ops roles posted in the last 60 days",
+          "I noticed you're expanding your team in Europe. Building out a global delivery center?",
+        context: "50 new roles posted in the last 60 days for EU",
       },
     ],
     financialMetrics: [
-      { label: "Annual Revenue", value: "$42M", change: 35, trend: "up" },
-      { label: "Customer Count", value: "380", change: 28, trend: "up" },
-      { label: "Churn Rate", value: "3.2%", change: -0.8, trend: "down" },
-      { label: "Sales Headcount", value: "24", change: 8, trend: "up" },
+      { label: "Annual Revenue", value: "₹1.2 Lakh Crores", change: 15, trend: "up" },
+      { label: "Employee Count", value: "3,00,000+", change: 10, trend: "up" },
+      { label: "Attrition Rate", value: "14.6%", change: -2.1, trend: "down" },
+      { label: "Sales Headcount", value: "5,000+", change: 500, trend: "up" },
     ],
     valueMap: [
       {
@@ -198,55 +198,55 @@ export const mockMeetingBriefs: Record<string, MeetingBrief> = {
     confidenceScore: 87,
     citations: [
       {
-        text: "EU Expansion",
-        source: "LinkedIn",
+        text: "AI Platform Launch",
+        source: "Company Website",
         url: "#",
       },
       {
-        text: "Series B Funding",
-        source: "TechCrunch",
+        text: "Quarterly Results",
+        source: "SEBI Filings",
         url: "#",
       },
       {
         text: "Revenue Metrics",
-        source: "SEC Filings",
+        source: "Annual Report",
         url: "#",
       },
     ],
   },
   "sample-2": {
     id: "sample-2",
-    prospectName: "Michael Rodriguez",
-    companyName: "CloudScale Solutions",
+    prospectName: "Rohan Mehta",
+    companyName: "Tata Consultancy Services",
     role: "Director of Engineering",
-    industry: "Cloud Infrastructure",
+    industry: "IT Services & Consulting",
     iceBreakers: [
       {
         id: "ice-4",
         question:
-          "Your engineering team grew significantly. How are you managing knowledge sharing at scale?",
-        context: "Team grew from 12 to 28 engineers in 6 months",
+          "Your engineering team has a great reputation. How are you managing innovation at such a large scale?",
+        context: "TCS recognized as a top employer",
       },
       {
         id: "ice-5",
         question:
-          "I see you're open-sourcing more projects. What's the strategy there?",
-        context: "3 major open-source projects launched this year",
+          "I see TCS is investing heavily in cloud-native solutions. What's the strategy there?",
+        context: "Recent partnerships with major cloud providers",
       },
     ],
     financialMetrics: [
       {
-        label: "Monthly Recurring Revenue",
-        value: "$1.2M",
-        change: 42,
+        label: "Market Cap",
+        value: "₹14 Lakh Crores",
+        change: 12,
         trend: "up",
       },
-      { label: "Enterprise Customers", value: "12", change: 5, trend: "up" },
+      { label: "Fortune 500 Clients", value: "100+", change: 5, trend: "up" },
       {
-        label: "Infrastructure Cost",
-        value: "$450K",
-        change: 18,
-        trend: "down",
+        label: "R&D Spend",
+        value: "₹5,000 Crores",
+        change: 20,
+        trend: "up",
       },
     ],
     valueMap: [
@@ -264,13 +264,13 @@ export const mockMeetingBriefs: Record<string, MeetingBrief> = {
     confidenceScore: 72,
     citations: [
       {
-        text: "Engineering Hiring",
+        text: "Top Employer Award",
         source: "LinkedIn",
         url: "#",
       },
       {
-        text: "Open Source Initiative",
-        source: "Company Blog",
+        text: "Cloud Partnerships",
+        source: "Company Newsroom",
         url: "#",
       },
     ],

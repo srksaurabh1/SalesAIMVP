@@ -18,11 +18,11 @@ export default function Index() {
               <div className="flex items-center gap-2 mb-2">
                 <Brain className="w-6 h-6 text-primary" />
                 <span className="text-sm font-semibold text-primary">
-                  SELLER HOME
+                  HOME
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-foreground mb-2">
-                Intelligence Hub
+                Intelligence Sales
               </h1>
               <p className="text-muted-foreground max-w-2xl">
                 {role === "sdr"

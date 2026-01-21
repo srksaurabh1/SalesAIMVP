@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     # GROQ
     groq_api_url: str = "https://api.groq.com/openai/v1/chat/completions"
-    groq_api_key: str = "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"
+    groq_api_key: str = "API"
     groq_model: str = "openai/gpt-oss-120b"
     
     # PostgreSQL + pgvector

@@ -4,9 +4,26 @@ import { IntentSpikesAlert } from "@/components/dashboard/IntentSpikesAlert";
 import { UpcomingMeetings } from "@/components/dashboard/UpcomingMeetings";
 import { useRole } from "@/hooks/useRole";
 import { TrendingUp } from "lucide-react";
+import { useState } from "react";
+import { fetchBriefing } from "@/lib/orchestrationClient";
 
 export default function Index() {
   const { role } = useRole();
+  const [companyName, setCompanyName] = useState("");
+  const [insights, setInsights] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleGenerateInsights = async () => {
+    setLoading(true);
+    try {
+      const briefing = await fetchBriefing(companyName, role);
+      setInsights(briefing);
+    } catch (error) {
+      console.error("Error generating insights:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <MainLayout>
@@ -123,6 +140,38 @@ export default function Index() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Generate Insights Section */}
+      <section className="py-8">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4">Generate Insights for a Company</h2>
+          <div className="flex items-center gap-4 mb-6">
+            <input
+              type="text"
+              placeholder="Enter company name"
+              value={companyName}
+              onChange={(e) => setCompanyName(e.target.value)}
+              className="border border-gray-300 rounded-lg px-4 py-2 w-full"
+            />
+            <button
+              onClick={handleGenerateInsights}
+              className="bg-primary text-white px-4 py-2 rounded-lg"
+              disabled={loading}
+            >
+              {loading ? "Generating..." : "Generate Insights"}
+            </button>
+          </div>
+
+          {insights && (
+            <div className="bg-white p-4 rounded-lg shadow">
+              <h3 className="text-xl font-semibold mb-2">Insights</h3>
+              <pre className="text-sm bg-gray-100 p-2 rounded-lg overflow-auto">
+                {JSON.stringify(insights, null, 2)}
+              </pre>
+            </div>
+          )}
         </div>
       </section>
     </MainLayout>

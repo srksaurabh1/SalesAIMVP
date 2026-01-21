@@ -6,19 +6,89 @@ import { FinancialPulse } from "@/components/meeting-brief/FinancialPulse";
 import { ValueMap } from "@/components/meeting-brief/ValueMap";
 import { ConfidenceMeter } from "@/components/meeting-brief/ConfidenceMeter";
 import { Citations } from "@/components/meeting-brief/Citations";
+import { BriefingDisplay } from "@/components/dashboard/BriefingDisplay";
+import { useBriefing } from "@/hooks/useBriefing";
+import { useRole } from "@/hooks/useRole";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowLeft, Calendar, MapPin, Briefcase } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { ArrowLeft, Calendar, MapPin, Briefcase, AlertTriangle } from "lucide-react";
 
 export default function MeetingBrief() {
   const { accountId } = useParams<{ accountId: string }>();
   const navigate = useNavigate();
+  const { role } = useRole();
 
-  // Get the mock brief data
-  const brief = mockMeetingBriefs[accountId || "sample-1"];
+  // Fetch from orchestration service (with fallback to mock data)
+  const { briefing, loading, error } = useBriefing(accountId || "sample-1", role === "sdr" ? "sdr" : "ae");
+
+  // Fallback to mock data if orchestration service is unavailable
+  const brief = briefing ? undefined : mockMeetingBriefs[accountId || "sample-1"];
   const meeting = mockMeetings.find((m) => m.id === accountId);
 
+  // Loading state
+  if (loading) {
+    return (
+      <MainLayout>
+        <section className="border-b border-border bg-gradient-to-br from-primary/5 to-secondary/5 py-8">
+          <div className="container mx-auto px-4">
+            <Skeleton className="h-10 w-32 mb-4" />
+            <Skeleton className="h-12 w-96 mb-4" />
+            <Skeleton className="h-20 w-full" />
+          </div>
+        </section>
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <Skeleton className="h-96 w-full" />
+          </div>
+        </section>
+      </MainLayout>
+    );
+  }
+
+  // Error state
+  if (error && !briefing && !brief) {
+    return (
+      <MainLayout>
+        <div className="container mx-auto px-4 py-16">
+          <Alert variant="destructive">
+            <AlertTriangle className="h-4 w-4" />
+            <AlertDescription>{error}</AlertDescription>
+          </Alert>
+          <Button onClick={() => navigate("/")} variant="default" className="mt-4">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Dashboard
+          </Button>
+        </div>
+      </MainLayout>
+    );
+  }
+
+  // Show orchestration briefing if available, otherwise fallback to mock
+  if (briefing) {
+    return (
+      <MainLayout>
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <Button
+              onClick={() => navigate("/")}
+              variant="ghost"
+              size="sm"
+              className="mb-4"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Dashboard
+            </Button>
+            <BriefingDisplay briefing={briefing} />
+          </div>
+        </section>
+      </MainLayout>
+    );
+  }
+
+  // Fallback to mock data
   if (!brief) {
     return (
       <MainLayout>
